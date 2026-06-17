@@ -2,3 +2,8 @@
 !cv.pdf
 !cv.cls
 !cv.tex
+
+# Claude Code skill(s) bundled with this CV
+!.claude/
+!.claude/skills/
+!.claude/skills/**
