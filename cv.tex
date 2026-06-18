@@ -79,11 +79,21 @@
     \end{itemize}
 
     \lrTitle[
+        ltitle={Mini C Compiler},
+        rtitle={(C++, LLVM, Compilers)}
+    ]
+    \begin{itemize}
+        \item Created a compiler for Mini C, a subset of C.
+        \item Built a \kw{top-down recursive-descent} lexer and parser in C++, generating code via \kw{LLVM IR}.
+        \item Produced \kw{colourised, informative error diagnostics} more detailed than mainstream C compilers.
+    \end{itemize}
+
+    \lrTitle[
         ltitle={Multithreaded Packet Sniffer},
         rtitle={(C, Networking, Multithreading)},
     ]
     \begin{itemize}
-        \item Detects domain blacklist violations, SYN floods, and ARP cache poisoning.
+        \item Developed a sniffer to detect domain blacklist violations, SYN floods, and ARP cache poisoning.
         \item Implemented a thread-safe packet queue with \kw{pthreads} feeding a thread pool, processing \kw{1,000,000s of packets without loss}.
         \item Validated for memory leaks and race conditions with \kw{Valgrind, Helgrind, and GDB}.
     \end{itemize}
@@ -93,7 +103,7 @@
         rtitle={(Verilog, Vivado)},
     ]
     \begin{itemize}
-        \item A recreation of Pacman on a Nexys 4 FPGA; achieved the \kw{top score in the year}.
+        \item Recreated Pacman on a Nexys 4 FPGA, achieving the \kw{top score in the year}.
         \item Implemented \kw{custom VGA drivers} for graphics output, including frame-buffer control and pixel-timing generation.
         \item Debugged signal timings across digital modules using \kw{Verilog test benches in Vivado}.
     \end{itemize}
@@ -103,18 +113,9 @@
         rtitle={(Python, OpenCV, Flask)},
     ]
     \begin{itemize}
-        \item A web app that reads resistor values from photos using image processing; scored \kw{100\%}.
+        \item Developed a web app that reads resistor values from photos via image processing, scoring \kw{100\%}.
         \item Built \kw{OpenCV} pipelines for resistor localisation, normalisation (denoising, deblurring, glare removal), and colour extraction.
         \item Applied \kw{K-means clustering} to segment colour regions and locate resistor bands.
-    \end{itemize}
-
-    \lrTitle[
-        ltitle={Magnetic Electron Trap Simulation},
-        rtitle={(Python, SciPy, NumPy)},
-    ]
-    \begin{itemize}
-        \item Modelled and visualised an electron in a magnetic field by solving its differential equations; scored \kw{100\%}.
-        \item Parallelised the simulation with \kw{multiprocessing} to bypass the \kw{GIL}, achieving a \kw{20x speedup}.
     \end{itemize}
 
     \lrTitle[
@@ -122,7 +123,7 @@
         rtitle={},
     ]
     \begin{itemize}
-        \item Movie Information Viewer (Java, from-scratch data structures), Gig Management System (Java, PostgreSQL), Discord Drive cloud storage (Python, Quart), Rhythm-game Discord bot, Maze \& Circuit Solvers, Line-Following Buggy (C), Self-Balancing Robot (Simulink).
+        \item Magnetic Electron Trap simulation (Python, SciPy, 20x speedup), Movie Information Viewer (Java, from-scratch data structures), Gig Management System (Java, PostgreSQL), Discord Drive cloud storage (Python, Quart), Rhythm-game Discord bot, Maze \& Circuit Solvers, Line-Following Buggy (C), Self-Balancing Robot (Simulink).
     \end{itemize}
 \end{experienceSection}
 
