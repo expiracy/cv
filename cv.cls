@@ -3,7 +3,7 @@
 % MS CSE ASU                                           %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \AtBeginDocument{%
-  \fontsize{8}{8}\selectfont
+  \fontsize{9}{11.6}\selectfont
 }
 
 \NeedsTeXFormat{LaTeX2e}
@@ -11,7 +11,7 @@
 
 \LoadClass[9pt,letterpaper]{article} % Font size and paper type
 
-\usepackage[left=0.3in,top=0.3in,right=0.3in,bottom=0.3in]{geometry} % set document margins
+\usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry} % set document margins
 \usepackage[parfill]{parskip} % Remove paragraph indentation
 
 \usepackage{etoolbox}
@@ -25,13 +25,23 @@
 }
 
 % Load the fontspec package to set the font
-\usepackage{lmodern} % Load the Helvetica font
+\usepackage{lmodern}
+\usepackage[default]{sourcesanspro} % Source Sans 3 (Pro): clean, modern sans
 \renewcommand\familydefault{\sfdefault} % Set the  font family to sans-serif
 \usepackage[T1]{fontenc} % Use the T1 font encoding to ensure proper character rendering
 
 \pagestyle{empty}
 
 \usepackage{enumitem}
+\usepackage{microtype}
+
+% ----- Consistent spacing system -----
+% One vertical rhythm used everywhere, replacing the per-entry negative \vspace hacks.
+\setlength{\parskip}{0pt}                % no automatic paragraph spacing -- entries are separated by \entryskip (defined below)
+% topsep is the tight gap from a title to its first bullet; itemsep separates the bullets.
+\setlist[itemize]{leftmargin=2em, labelsep=0.6em, topsep=2pt, itemsep=2.5pt, parsep=0pt, partopsep=0pt}
+
+\newcommand{\kw}[1]{\textbf{#1}}         % bold a keyword (tech / metric) inside body text
 
 % -------------- README --------------
 % Visit https://github.com/vgnshiyer/ASU-sparkysundevil-resume-template for comprehensive documenation.
@@ -49,25 +59,24 @@
     \expandafter\ifstrequal\expandafter{#1}{default}{}{a}
 }
 
+% One shared gap before EVERY entry and after every section rule. \addvspace makes adjacent
+% copies merge to their max, so header-to-first-entry equals entry-to-entry automatically.
+\newcommand{\entryskip}{\addvspace{8.5pt}}
 \newcommand\sectionTitle[1]{%
     \begingroup
-        \textbf{\MakeUppercase{#1}}
-        \vspace{0.4em}
-        \hrule
-        \vspace{-0.3em}
+        \vspace{9pt}%                       space ABOVE header: groups it with the content below
+        {\fontsize{10.5}{12}\selectfont\bfseries\textls[80]{\MakeUppercase{#1}}}
+        \vspace{2.5pt}%
+        \hrule height 0.8pt%                one consistent rule weight everywhere
     \endgroup
+    \entryskip
 }%
 
 % ------------------------------------
 
 % ------------- Header --------------
 \newcommand\printNameTitle[1]{%
-    \begingroup
-        \hfill{\MakeUppercase{\LARGE\bfseries #1}}\hfill
-        \break
-        \vspace{-0.5em}
-        \hrule
-    \endgroup
+    {\fontsize{19}{22}\selectfont\bfseries\textls[100]{\MakeUppercase{#1}}}\\[3pt]
 }%
 
 \newkeycommand{\introduction}[
@@ -140,6 +149,7 @@
     ltitle,
     rtitle
 ]{
+    \entryskip
     {
         \bf \commandkey{ltitle} 
     } 
@@ -171,12 +181,6 @@
 % -------------- Experience -------------
 \newenvironment{experienceSection}[1]{%
     \sectionTitle{#1}%
-    \begin{list}{}{ % List for each highlight in the section
-        \setlength{\leftmargin}{0em} % Margin within the section
-    }%
-        \item[]%
-    }{%
-    \end{list}%
 }%
 
 \newkeycommand{\experienceItem}[
@@ -184,12 +188,12 @@
     position,
     duration
 ]{%
+    \entryskip
     \textbf{%
         \commandkey{company} -- \commandkey{position}
     } \hfill {%
         \commandkey{duration}%
     }
-    \vspace{-0.7em}%
 }%
 
 

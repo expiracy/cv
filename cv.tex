@@ -1,5 +1,5 @@
 % -------------- README --------------
-% Visit https://github.com/vgnshiyer/ASU-sparkysundevil-resume-template for comprehensive documenation.
+% Visit https://github.com/vgnshiyer/ASU-sparkysundevil-resume-template for comprehensive documentation.
 
 % -------------- Resume ---------------
 \documentclass{cv}
@@ -19,223 +19,111 @@
 \begin{educationSection}{Education}
     \lrTitle[
         ltitle={University of Warwick -- BEng Computer Systems Engineering (Year in Industry)},
-        rtitle={Sept. 2022 - June 2026},
-    ] \\
-    \keyValueItem[
-        key={Grade},
-        value={First (83.3\%)}
-    ] \\
-    \keyValueItem[
-        key={Key Modules},
-        value={AI, Data Structures, Operating Systems \& Networks, Data Analytics, Computer Architecture, FPGAs, Software Engineering, Maths}
-    ] 
-    \\[0.5em]
+        rtitle={Sept. 2022 -- June 2026},
+    ]
+    \begin{itemize}
+        \item \keyValueItem[key={Grade}, value={\kw{First (83.3\%)}}]
+        \item \keyValueItem[key={Key Modules}, value={AI, Data Structures, Operating Systems \& Networks, Data Analytics, Computer Architecture, FPGAs, Software Engineering, Maths}]
+    \end{itemize}
+
     \lrTitle[
         ltitle={Reading School},
-        rtitle={Sept. 2020 - July 2022},
-    ] \\
-    \keyValueItem[
-        key={Grades},
-        value={A*A*A* (Maths, Physics, Computer Science)}
-    ] 
-    % \\[0.5em]
-    % \lrTitle[
-    %     ltitle={Herschel Grammar School},
-    %     rtitle={Sept. 2016 - July 2019},
-    % ] 
-    % \\
-    % \keyValueItem[
-    %     key={Grades},
-    %     value={9998887777}
-    % ] 
+        rtitle={Sept. 2020 -- July 2022},
+    ]
+    \begin{itemize}
+        \item \keyValueItem[key={Grades}, value={\kw{A*A*A*} (Maths, Physics, Computer Science)}]
+    \end{itemize}
 \end{educationSection}
 
 % --------- Skills -----------
 \begin{skillSection}{Skills \& Awards}
-    \keyValueItem[
-        key={Skills},
-        value={C, C++, C\#, Python, Java, SQL, React, Typescript, HTML, CSS, JS, Haskell, Matlab, Verilog}
-    ] \\
-    \keyValueItem[
-        key={Awards},
-        value={Exceptional Achievement in Second Year, Computer Science Department Award}
-    ]
+    \begin{itemize}
+        \item \keyValueItem[key={Languages}, value={C, C++, C\#, Python, Java, Haskell, Verilog, MATLAB}]
+        \item \keyValueItem[key={Web \& Data}, value={React, TypeScript, JavaScript, HTML, CSS, SQL}]
+        \item \keyValueItem[key={Awards}, value={Exceptional Achievement in Second Year, Computer Science Department Award}]
+    \end{itemize}
 \end{skillSection}
 
 % --------- Experience -----------
 \begin{experienceSection}{Work Experience}
     \experienceItem[
-        company={Qube Research and Technologies},
-        position={Quantitive Technology Intern},
-        duration={June 2024 – Present}
+        company={Qube Research \& Technologies},
+        position={Quantitative Technology Intern},
+        duration={June 2024 -- Present}
     ]
-    \begin{itemize}[leftmargin=*]
-        \itemsep -5pt {}
-        \item Improving deployments by developing a tool that automatically generates environment-specific configurations, new supporting tools that leverage these configurations, and integrating the process management service to enhance consistency, reduce manual effort, and establish an explicit single source of truth.
-        \item Designed and implemented a C++ process management service that enables support teams to control and monitor system processes through both a UI and code, eliminating the need for manual SSH interaction and providing hands-on experience with Unix system programming and service design.
-        \item Developed automated tools to generate documentation and samples for multiple languages to a single reference point.
-        \item Reworked and upgraded system components and the CI/CD pipeline to support C\# builds and tests on the Linux environment, increasing code coverage and Linux developer capabilities.
-        \item Developed an LLM-based support assistant with a React.js frontend to generate code samples and deliver system-specific responses which used the Reason \& Act framework with custom tools to allow multi-step reasoning, domain-specific context access, and output verification to significantly improve response accuracy.
+    \begin{itemize}
+        \item Designed and built a \kw{C++ process-management service} that lets support teams control and monitor system processes via a UI and code, eliminating manual SSH interaction.
+        \item Developed a tool that \kw{auto-generates environment-specific configurations} and wires them into the process-management service, establishing a single source of truth.
+        \item Reworked the \kw{CI/CD pipeline} to support \kw{C\# builds and tests on Linux}, raising code coverage and unblocking Linux developers.
+        \item Built an \kw{LLM support assistant} (React.js) on a \kw{ReAct loop} with custom tools for multi-step reasoning, context access, and output verification, improving answer accuracy.
     \end{itemize}
 
     \experienceItem[
         company={MyTutor},
         position={Tutor},
-        duration={Jan. 2023 – Present}
+        duration={Jan. 2023 -- Present}
     ]
-    \begin{itemize}[leftmargin=*]
-        \itemsep -5pt {}
-    \item Communicated complex concepts in a simple way to help A-Level and GCSE students master subject material.
+    \begin{itemize}
+        \item Communicated complex concepts simply to help \kw{A-Level and GCSE students} master subject material.
     \end{itemize}
-
-    \experienceItem[
-        company={Expedia},
-        position={Spring Insight},
-        duration={April 2022 – April 2022}
-    ]
-    \begin{itemize}[leftmargin=*]
-        \itemsep -5pt {}
-        \item Gained practical insights into the processes and agile methodologies employed in software engineering and mobile app development projects.
-    \end{itemize}
-
-    \experienceItem[
-        company={Cisco},
-        position={Software Engineering Course},
-        duration={June 2019 – June 2019}
-    ]
-    \begin{itemize}[leftmargin=*]
-        \itemsep -5pt {}
-        \item Gained practical insight into the software development process by building and iterating on basic Python programs, and familiarised with Git for collaboration.
-    \end{itemize}
-
-    \experienceItem[
-        company={Oracle},
-        position={Work Experience},
-        duration={May 2019 – May 2019}
-    ]
-    \begin{itemize}[leftmargin=*]
-        \itemsep -5pt {}
-        \item Developed a basic web-based chatbot with a Java Spring backend and a HTML, CSS and JS frontend, gaining hands-on experience with RESTful APIs and using Gradle for dependency management and project build automation.
-    \end{itemize}
-
 \end{experienceSection}
 
 % --------- Projects -----------
 \begin{experienceSection}{Key Projects}
     \lrTitle[
-        ltitle={FPGA Pacman},
-        rtitle={(Verilog)},
-    ] \\
-    A recreation of Pacman on a Nexys 4 FPGA using Verilog; achieved the top score in the year.
-    \begin{itemize}[leftmargin=*]
-        \vspace{-0.5em}
-        \itemsep -5pt {}
-        \item Debugged hardware signals using Verilog test benches in Vivado to verify signals and timings across different digital modules.
-        \item Implemented custom VGA drivers to manage the graphics output, including frame buffer control, pixel timing generation.
-    \end{itemize}
-
-    \lrTitle[
-        ltitle={Magnetic Electron Trap Simulation},
-        rtitle={(Python, Scipy, Numpy, Matplotlib, Optimisation)},
-    ] \\
-    Solved and visualised differential equations using Matplotlib, SciPy and NumPy to model an electron within a magnetic field; achieved a score of 100\%.
-    \begin{itemize}[leftmargin=*]
-        \vspace{-0.5em}
-        \itemsep -5pt {}
-        \item Implemented multiprocessing to parallelise simulation code and bypass the Global Interpreter Lock (GIL) to achieve a 20x performance improvement.
+        ltitle={Conjugate Gradient Optimisation on a 3D Mesh},
+        rtitle={(C, AVX-256, OpenMP, Cache Optimisation)}
+    ]
+    \begin{itemize}
+        \item Optimised a 3D-mesh conjugate gradient solver with \kw{AVX-256}, \kw{OpenMP}, and locality refactoring for an \kw{8.88x speedup}.
     \end{itemize}
 
     \lrTitle[
         ltitle={Multithreaded Packet Sniffer},
         rtitle={(C, Networking, Multithreading)},
-    ] \\
-     Developed a multithreaded packet sniffer to identify domain blacklist violations, SYN attacks, and ARP cache poisoning attacks.
-    \begin{itemize}[leftmargin=*]
-        \vspace{-0.5em}
-        \itemsep -5pt {}
-        \item Implemented a thread-safe packet queue with pthreads to dispatch work efficiently to a thread pool, allowing the application to successfully process 1,000,000s of packets without loss.
-        \item Ensured memory leak, race condition and bug free code by validating code with tools like Valgrind, Helgrind and GDB.
-    \end{itemize}
-
-    \lrTitle[
-        ltitle={Optimising the Conjugate Gradient Numerical Method on a 3D Mesh},
-        rtitle={(C, Vector Instructions, Cache and Memory Optimisation)}
     ]
-    \begin{itemize}[leftmargin=*]
-        \vspace{-0.5em}
-        \itemsep -5pt {}
-        \item Optimised the conjugate gradient numerical method on a 3D mesh by leveraging AVX-256 intrinsics, OpenMP directives, and code refactoring to optimise memory data locality, to achieve an 8.88x speedup.
+    \begin{itemize}
+        \item Detects domain blacklist violations, SYN floods, and ARP cache poisoning.
+        \item Implemented a thread-safe packet queue with \kw{pthreads} feeding a thread pool, processing \kw{1,000,000s of packets without loss}.
+        \item Validated for memory leaks and race conditions with \kw{Valgrind, Helgrind, and GDB}.
     \end{itemize}
 
     \lrTitle[
-        ltitle={Movie Information Viewer},
-        rtitle={(Java, Data Structures)},
-    ] 
-    \begin{itemize}[leftmargin=*]
-        \vspace{-0.5em}
-        \itemsep -5pt {}
-        \item Implemented data structures and abstract data types from scratch, including binary heap, hash map, linked list, array list, and graph; applied each appropriately to minimize lookup time based on context.
-        \item Implemented an algorithm to find the distance via common movies between 2 distinct cast members.
+        ltitle={FPGA Pacman},
+        rtitle={(Verilog, Vivado)},
+    ]
+    \begin{itemize}
+        \item A recreation of Pacman on a Nexys 4 FPGA; achieved the \kw{top score in the year}.
+        \item Implemented \kw{custom VGA drivers} for graphics output, including frame-buffer control and pixel-timing generation.
+        \item Debugged signal timings across digital modules using \kw{Verilog test benches in Vivado}.
     \end{itemize}
-
 
     \lrTitle[
         ltitle={Resistor Image Scanner},
-        rtitle={(Python, OpenCV, Flask, HTML, CSS, JS)},
-    ] \\
-    A web app that uses image processing techniques to identify resistor values from images; achieved a score of 100\%.
-    \begin{itemize}[leftmargin=*]
-        \vspace{-0.5em}
-        \itemsep -5pt {}
-        \item Developed various image transformation pipelines using OpenCV for resistor localisation, image normalisation (denoising, deblurring, removing glare), and final color extraction.
-        \item Implemented the K-Means clustering algorithm to segment color regions and accurately detect resistor band positions.
+        rtitle={(Python, OpenCV, Flask)},
+    ]
+    \begin{itemize}
+        \item A web app that reads resistor values from photos using image processing; scored \kw{100\%}.
+        \item Built \kw{OpenCV} pipelines for resistor localisation, normalisation (denoising, deblurring, glare removal), and colour extraction.
+        \item Applied \kw{K-means clustering} to segment colour regions and locate resistor bands.
     \end{itemize}
 
     \lrTitle[
-        ltitle={Discord Drive -- Cloud Storage},
-        rtitle={(Python, Quart, SQLite, HTML, CSS, JS)},
-    ] \\
-    A proof of concept full-stack web app allowing users to store files via discord in a server and browse them in a browser.
-    \begin{itemize}[leftmargin=*]
-        \vspace{-0.5em}
-        \itemsep -5pt {}
-        \item Designed and implemented a 3NF SQL database to optimise storage and retrieval of user file data, ensuring efficient and scalable performance. 
-    \end{itemize}
-
-    \lrTitle[
-        ltitle={Gig Management Application},
-        rtitle={(Java, PostgreSQL, JDBC)},
-    ] \\
-    A gig management system to allow venues to seamlessly create, manage and obtain other information about gigs and acts.
-    \begin{itemize}[leftmargin=*]
-        \vspace{-0.5em}
-        \itemsep -5pt {}
-        \item Designed a robust database schema with triggers and views, ensuring robust data validation and providing intuitive database access interfaces.
-        \item Utilised unit testing to validate both the database design and validate the database mutators and accessors, ensuring system reliability.
-        \item Demonstrated proficiency in crafting complex queries to obtain required data from the database through aggregate queries and subqueries.
-    \end{itemize}
-
-    \lrTitle[
-        ltitle={Rhythm Game Score Showcase Discord Bot},
-        rtitle={(Python, sqlite)},
-    ] \\
-    A Discord bot allowing users to save and showcase scores across multiple servers through messages and custom-generated interactive Discord embeds.
-    \begin{itemize}[leftmargin=*]
-        \vspace{-0.5em}
-        \itemsep -5pt {}
-        \item Implemented asynchronous handling for user interactions to improve system responsiveness.
+        ltitle={Magnetic Electron Trap Simulation},
+        rtitle={(Python, SciPy, NumPy)},
+    ]
+    \begin{itemize}
+        \item Modelled and visualised an electron in a magnetic field by solving its differential equations; scored \kw{100\%}.
+        \item Parallelised the simulation with \kw{multiprocessing} to bypass the \kw{GIL}, achieving a \kw{20x speedup}.
     \end{itemize}
 
     \lrTitle[
         ltitle={Other Projects},
         rtitle={},
-    ] \\
-    Rhythm Game Music Player (Java, JavaFX), Maze solver (Java), Basic Circuit Solver (Python Algorithms), Line Following Buggy (C, Memory Mapped I/O), Self Balancing Robot (Hardware Programming, Simulink)
-    
+    ]
+    \begin{itemize}
+        \item Movie Information Viewer (Java, from-scratch data structures), Gig Management System (Java, PostgreSQL), Discord Drive cloud storage (Python, Quart), Rhythm-game Discord bot, Maze \& Circuit Solvers, Line-Following Buggy (C), Self-Balancing Robot (Simulink).
+    \end{itemize}
 \end{experienceSection}
-
-% \begin{experienceSection}{Interests}
-%     Climbing, Gaming, Electronics, Software Development, Optimisation
-% \end{experienceSection}
 
 \end{document}
