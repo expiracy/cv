@@ -24,6 +24,14 @@ weak verb.
 Avoid opening with: Helped, Worked (on), Assisted, Participated (in), Involved
 (in), Was responsible for — they hide your actual contribution.
 
+## Bold the keywords (`\kw`)
+
+Wrap the key technology/technique and any hard metric in `\kw{…}` (defined in
+`cv.cls` as bold) so the page stays scannable — the reader's eye lands on the
+tech and the numbers. Bold 1–3 *short* spans per bullet (the deliverable or
+technique, and the result), never whole clauses. Grades get bold too:
+`\kw{First (83.3\%)}`, `\kw{A*A*A*}`.
+
 ## Weak words → cut or replace
 
 | Weak | Why it's weak | Fix |
@@ -61,21 +69,20 @@ Use `--` for ranges (`June 2024 -- Present`).
 ## Before → after
 
 Each "before" is the kind of flat line people write first; each "after" is in
-this CV's voice.
+this CV's voice — tech and metrics wrapped in `\kw{}` (bold).
 
 1. **Before:** Worked on a packet sniffer that could handle a lot of packets.
-   **After:** Implemented a thread-safe packet queue with pthreads to dispatch
-   work to a thread pool, processing 1,000,000s of packets without loss.
+   **After:** Implemented a thread-safe packet queue with \kw{pthreads} feeding a
+   thread pool, processing \kw{1,000,000s of packets without loss}.
 
 2. **Before:** Made the conjugate gradient code faster using vector
    instructions.
-   **After:** Optimised a 3D-mesh conjugate gradient solver with AVX-256
-   intrinsics, OpenMP, and locality-focused refactoring to achieve an 8.88x
-   speedup.
+   **After:** Optimised a 3D-mesh conjugate gradient solver with \kw{AVX-256},
+   \kw{OpenMP}, and locality refactoring for an \kw{8.88x speedup}.
 
 3. **Before:** Used multiprocessing to speed up the simulation.
-   **After:** Parallelised the simulation with multiprocessing to bypass the
-   GIL, achieving a 20x performance improvement.
+   **After:** Parallelised the simulation with \kw{multiprocessing} to bypass the
+   \kw{GIL}, achieving a \kw{20x speedup}.
 
 4. **Before:** Responsible for build pipeline improvements.
    **After:** Reworked the CI/CD pipeline to support C\# builds and tests on
