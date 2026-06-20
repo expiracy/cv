@@ -100,12 +100,11 @@
 
     \lrTitle[
         ltitle={FPGA Pacman},
-        rtitle={(Verilog, Vivado)},
+        rtitle={(Verilog, Vivado, Nexys 4 FPGA)}
     ]
     \begin{itemize}
-        \item Recreated Pacman on a Nexys 4 FPGA, achieving the \kw{top score in the year}.
-        \item Implemented \kw{custom VGA drivers} for graphics output, including frame-buffer control and pixel-timing generation.
-        \item Debugged signal timings across digital modules using \kw{Verilog test benches in Vivado}.
+        \item Implemented Pacman's game logic (movement, collisions, and scoring) as \kw{hardware state machines}, taking the \kw{top score in the year}.
+        \item Rendered the game from sprites in on-chip \kw{BRAM}, with custom frame-drawing logic and a real-time \kw{VGA} driver built in hardware.
     \end{itemize}
 
     \lrTitle[
