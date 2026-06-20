@@ -148,14 +148,12 @@
 \newkeycommand{\lrTitle}[
     ltitle,
     rtitle
-]{
+]{%
     \entryskip
-    {
-        \bf \commandkey{ltitle} 
-    } 
-    \hfill {
-        \commandkey{rtitle}
-    } 
+    \begingroup
+        \parfillskip=0pt\relax
+        {\bfseries\commandkey{ltitle}}\hfill{\commandkey{rtitle}}\null\par
+    \endgroup
 }%
 
 % ------------------------------------
@@ -189,11 +187,10 @@
     duration
 ]{%
     \entryskip
-    \textbf{%
-        \commandkey{company} -- \commandkey{position}
-    } \hfill {%
-        \commandkey{duration}%
-    }
+    \begingroup
+        \parfillskip=0pt\relax
+        \textbf{\commandkey{company} -- \commandkey{position}}\hfill{\commandkey{duration}}\null\par
+    \endgroup
 }%
 
 
