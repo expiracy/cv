@@ -189,7 +189,7 @@
     \entryskip
     \begingroup
         \parfillskip=0pt\relax
-        \textbf{\commandkey{company} -- \commandkey{position}}\hfill{\commandkey{duration}}\null\par
+        \textbf{\commandkey{company} | \commandkey{position}}\hfill{\commandkey{duration}}\null\par
     \endgroup
 }%
 
