@@ -77,6 +77,10 @@ condensed page loses whatever was cut.
   same piece of work.
 - Extra detail on the site is fine and expected. Content the CV omits purely for
   length is not a divergence.
+- When the CV drops something for space that the site still knows — a module in
+  Key Concepts, say — mark that tag `visible: false` in `content.ts` rather than
+  deleting it. It stays searchable on the site without rendering as a badge, so
+  the visible lists match while nothing is lost.
 - A *contradiction* is never fine. Two different end dates for the same role, or
   an award under a different institution, is a bug — and the portfolio wins.
 - Watch the knock-on effects: closing a date range means moving that entry's
