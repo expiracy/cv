@@ -63,19 +63,39 @@ delete them after applying.
 The portfolio site (`src/data/content.ts` in the parent repo) renders the same
 career facts as the central CV. **They must never contradict each other.**
 
-Whenever you change the CV on the default branch, check and update the site in
-the same piece of work — dates, job titles, grades, awards and which institution
-granted them, project names and their bullet wording.
+**The portfolio is the source of truth.** It is the fuller record — unconstrained
+by page count, and it holds entries and detail the CV has no room for. New facts
+land there first, and the central CV is **adapted down** from it: select what
+earns its place on one page, tighten it to the house phrasing (see
+`cv-bullet-writer`), and drop the rest.
 
-- Extra detail on the site is fine; it isn't space-constrained and the CV is.
-  Content the CV drops purely for length can stay on the site.
+That direction is deliberate. Condensing a complete record into a page is a
+judgement call you can always redo; reconstructing the full record from a
+condensed page loses whatever was cut.
+
+- **New or changed information → portfolio first**, then adapt into the CV in the
+  same piece of work.
+- Extra detail on the site is fine and expected. Content the CV omits purely for
+  length is not a divergence.
 - A *contradiction* is never fine. Two different end dates for the same role, or
-  an award under a different institution, is a bug in whichever is stale.
+  an award under a different institution, is a bug — and the portfolio wins.
 - Watch the knock-on effects: closing a date range means moving that entry's
   prose from present to past tense in both places.
 - Commit the submodule first, then `git add cv` in the parent so the recorded
   SHA points at a commit that exists. Push the submodule before the parent, or a
   fresh clone gets a broken checkout.
+
+### The one exception: the Skills block
+
+The CV's `Languages` and `Technologies` lines have **no counterpart in the
+portfolio data**. The site expresses skills implicitly, through per-project tags
+and the About-page bio, so several entries on the CV (Haskell, HLS, Docker,
+JavaScript, HTML/CSS) appear nowhere in `content.ts`.
+
+Until the site grows a real skills field, **the CV owns that block** — edit it
+here directly and do not treat its absence from the portfolio as drift. If a
+skills field is ever added to `content.ts`, this exception goes away and the
+block follows the same portfolio-first rule as everything else.
 
 **Tailored branches are exempt.** They are point-in-time artefacts aimed at one
 employer, and the site does not track them.
@@ -87,5 +107,6 @@ employer, and the site does not track them.
    latexmk -pdf -interaction=nonstopmode cv.tex
    ```
    Check the reported page count, not just that it compiled.
-2. On the default branch, confirm the portfolio agrees.
+2. On the default branch, confirm the portfolio agrees — and that anything new
+   originated there rather than here.
 3. Commit. Never add `Co-Authored-By` lines.
