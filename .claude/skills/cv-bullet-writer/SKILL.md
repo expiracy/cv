@@ -124,6 +124,21 @@ For a **new role**, give the `\experienceItem` header then the bullets:
 \end{itemize}
 ```
 
+### Headings join their parts with a pipe
+
+When an entry heading is made of two title parts, separate them with ` | ` —
+never `--` or a hyphen:
+
+```latex
+ltitle={University of Warwick | BEng Computer Systems Engineering (Year in Industry at QRT)}
+```
+
+`\experienceItem` already hardcodes the separator between `company` and
+`position`, so roles get it for free — don't add your own. `\lrTitle` does not,
+so any `ltitle` holding two parts must spell it out. A bare `|` works in text
+mode in this class; no `\textbar` needed. Single-part headings (`Reading School`,
+project names) take no separator.
+
 For **education / skills**, each sub-point is an `\item` wrapping a
 `\keyValueItem`:
 
